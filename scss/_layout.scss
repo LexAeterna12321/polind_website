@@ -1,0 +1,6 @@
+.container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: [full-start] 1fr [center-start] repeat(3, [col-start] 1fr [col-end])[center-end] 1fr [full-end];
+    justify-content: center;
+}
