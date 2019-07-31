@@ -6,9 +6,10 @@
     transform: translateY(-50%);
     height: 40vh;
     margin-bottom: -20vh;
-    // @media only screen and(max-width:800px) {
-    //     grid-template-columns: repeat(3, 1fr);
-    // }
+
+    @media only screen and(max-width:$bp-large) {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 .city-overview-card {
@@ -24,17 +25,25 @@
     &:first-child,
     &:last-child {
         filter: grayscale(80%) brightness(.6);
-
-
     }
 
-    // @media only screen and(max-width:800px) {
+    @media only screen and(max-width:$bp-large) {
 
-    //     &:first-child,
-    //     &:last-child {
-    //         display: none;
-    //     }
-    // }
+        &:first-child,
+        &:last-child {
+            display: none;
+        }
+    }
+
+    @media only screen and(max-width:$bp-medium) {
+        &:nth-of-type(2) {
+            transform: translate(50%, 25%);
+        }
+
+        &:nth-of-type(4) {
+            transform: translate(-50%, 25%);
+        }
+    }
 
     &__img {
         top: 0;
@@ -69,6 +78,7 @@
     &--main {
         background-image: var(--overlay-gradient-dark-3);
         padding: 0 2rem;
+        z-index: 3;
     }
 
     &__name--main {
