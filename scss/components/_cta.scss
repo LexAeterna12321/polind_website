@@ -1,4 +1,31 @@
 .cta {
-    background-color: lightgreen;
+    min-height: 50rem;
     grid-column: full-start / full-end;
+    background-image: var(--overlay-gradient-dark-1), url("../img/cta-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &>* {
+        margin: 2rem 0;
+    }
+
+    &__h2 {
+        color: #fff;
+        font-size: 9rem;
+    }
+
+    &__btn {}
+
+    &__newsletter-text {
+        font-size: 2rem;
+    }
+
+    &__link {
+        color: var(--color-tertiary);
+        @include highlight;
+    }
 }

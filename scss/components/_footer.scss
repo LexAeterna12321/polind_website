@@ -1,4 +1,16 @@
 .footer {
-    background-color: mediumslateblue;
     grid-column: full-start / full-end;
+    font-size: 2rem;
+    padding: 1rem 0;
+    text-align: center;
+    background-color: var(--color-primary-dark);
+    color: var(--color-secondary-light);
+
+    &>* {
+        padding: .5rem;
+    }
+
+    span {
+        color: #c23616;
+    }
 }
