@@ -1,3 +1,12 @@
 @mixin shadow($color) {
     box-shadow: 0 0 2rem $color;
 }
+
+@mixin highlight {
+    opacity: .8;
+    transition: opacity .2s;
+
+    &:hover {
+        opacity: 1;
+    }
+}

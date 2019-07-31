@@ -4,8 +4,11 @@
     grid-template-columns: repeat(5, 1fr);
     grid-column-gap: 3.5rem;
     transform: translateY(-50%);
-
-
+    height: 40vh;
+    margin-bottom: -20vh;
+    // @media only screen and(max-width:800px) {
+    //     grid-template-columns: repeat(3, 1fr);
+    // }
 }
 
 .city-overview-card {
@@ -21,7 +24,17 @@
     &:first-child,
     &:last-child {
         filter: grayscale(80%) brightness(.6);
+
+
     }
+
+    // @media only screen and(max-width:800px) {
+
+    //     &:first-child,
+    //     &:last-child {
+    //         display: none;
+    //     }
+    // }
 
     &__img {
         top: 0;

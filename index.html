@@ -15,7 +15,7 @@
         <li class="nav__item"><a href="#!" class="nav__link">Hotels</a></li>
         <li class="nav__item"><a href="#!" class="nav__link">Travelers</a></li>
       </ul>
-      <svg class="nav__icon">
+      <svg class="icon">
         <use xlink:href="img/search.svg#icon-search"></use>
       </svg>
     </nav>
@@ -82,7 +82,20 @@
 
     <section class="search">
       <h2 class="h2 search__h2">Where you want to go?</h2>
-      search
+      <form action="#!" class="search__box">
+        <input type="text" class="search__input" placeholder="Search place" />
+        <svg class="icon search__icon">
+          <use xlink:href="img/search.svg#icon-search"></use>
+        </svg>
+      </form>
+      <div class="search__options">
+        <div class="search__options--1 search__options--active">Journey</div>
+        <div class="search__options--2">Travelers</div>
+        <div class="search__options--3">Guide</div>
+        <div class="search__options--4">Mazury</div>
+        <div class="search__options--5">Cracow</div>
+        <div class="search__options--6">Zakopane</div>
+      </div>
     </section>
     <section class="city-cards">city-cards</section>
     <section class="city-to-explore">city-to-explore</section>

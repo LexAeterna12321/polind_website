@@ -1,5 +1,6 @@
 .btn {
     @include shadow(var(--shadow-light));
+    @include highlight;
     border: none;
     border-radius: 100rem;
     padding: 1.4rem 2.4rem;

@@ -18,19 +18,6 @@
         align-items: center;
     }
 
-    &__icon {
-        display: block;
-        transform: scale(.4) translateY(.5rem);
-        fill: var(--color-tertiary);
-        width: 6rem;
-        height: 6rem;
-        cursor: pointer;
-
-        &:active {
-            transform: scale(.4) translateY(.3rem);
-        }
-    }
-
     &__link,
     &__link:link,
     &__link:visited {
