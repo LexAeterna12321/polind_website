@@ -1,1 +1,18 @@
-.btn {}
+.btn {
+    @include shadow(var(--shadow-light));
+    border: none;
+    border-radius: 100rem;
+    padding: 1.4rem 2.4rem;
+    text-transform: uppercase;
+    background-color: var(--color-tertiary);
+    transition: all .2s;
+    color: var(--color-secondary);
+    cursor: pointer;
+
+    &:focus,
+    &:hover {
+        outline: none;
+        transform: translateY(-2px);
+        background-color: var(--color-tertiary-light);
+    }
+}
