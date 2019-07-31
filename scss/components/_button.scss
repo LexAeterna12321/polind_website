@@ -16,4 +16,9 @@
         transform: translateY(-2px);
         background-color: var(--color-tertiary-light);
     }
+
+    &:active {
+        @include shadow(var(--shadow-dark));
+        transform: translateY(0);
+    }
 }

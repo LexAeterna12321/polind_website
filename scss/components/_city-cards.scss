@@ -1,4 +1,45 @@
 .city-cards {
-    background-color: royalblue;
     grid-column: center-start / center-end;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    min-height: 50vh;
+    color: var(--color-secondary-light);
+    grid-gap: 3rem;
+}
+
+.card {
+    display: grid;
+    grid-template-rows: 18rem repeat(4, min-content);
+    justify-items: center;
+    grid-row-gap: 2rem;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #eee;
+
+    &__img {
+        height: 100%;
+        width: 100%;
+        display: block;
+        object-fit: cover;
+    }
+
+    &__city-name {
+        color: var(--color-secondary);
+        font-size: 2.4rem;
+    }
+
+    &__city-location {
+        font-size: 1.3rem;
+        color: var(--color-secondary-light);
+    }
+
+    &__btn {
+        background-color: var(--color-primary-light-1);
+
+        &--active {
+            background-color: var(--color-tertiary-light);
+        }
+    }
+
+
 }
