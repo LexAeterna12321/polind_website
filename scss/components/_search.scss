@@ -1,8 +1,8 @@
 .search {
-    margin: 10vh 0 2vh 0;
     color: var(--color-secondary-light);
     grid-column: center-start / center-end;
     display: grid;
+    margin-bottom: 2vh;
 
     @media only screen and(max-width:$bp-medium) {
         margin: 10vh 0 2vh 0;
@@ -15,18 +15,20 @@
 
     &__box {
         @include highlight;
+        display: grid;
         align-items: center;
         margin: 1rem auto;
-        position: relative;
         width: 95%;
+        justify-content: center;
         transition: width .3s, opacity .2s;
+        grid-template-columns: repeat(16, 1fr);
     }
 
     &__input {
         @include shadow(var(--shadow-dark));
-        display: block;
-        margin: 0 auto;
-        width: 100%;
+        grid-row: 1;
+        grid-column: 1/-1;
+        padding-left: 4rem;
         font-family: inherit;
         font-size: inherit;
         color: inherit;
@@ -35,13 +37,6 @@
         border-radius: 10rem;
         font-family: var(--font-main);
         border: none;
-        padding-left: 4rem;
-        line-height: 1;
-
-        @media only screen and(max-width:$bp-medium) {
-            padding: .7rem .7rem .7rem 4rem;
-        }
-
 
         &::placeholder {
             font-weight: 100;
@@ -56,14 +51,10 @@
     }
 
     &__icon {
-        top: -10%;
-        right: 1%;
-        position: absolute;
-
-        @media only screen and(max-width:$bp-medium) {
-            top: -71%;
-            right: 0;
-        }
+        grid-row: 1;
+        grid-column: 16;
+        justify-self: end;
+        margin-left: -6rem;
     }
 
     &__options {

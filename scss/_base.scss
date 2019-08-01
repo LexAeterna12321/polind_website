@@ -22,3 +22,8 @@ html {
 body {
     background-color: var(--color-primary-dark);
 }
+
+::selection {
+    background-color: var(--color-tertiary-light);
+    color: var(--color-primary);
+}

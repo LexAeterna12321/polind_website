@@ -5,6 +5,11 @@
     min-height: 50vh;
     color: var(--color-secondary-light);
     grid-gap: 3rem;
+
+    @media only screen and(max-width:$bp-medium) {
+        grid-column: full-start / full-end;
+        margin: 0 1.5rem;
+    }
 }
 
 .card {
@@ -15,9 +20,9 @@
     border-radius: 5px;
     overflow: hidden;
     background-color: #eee;
+    box-shadow: .2rem .3rem .7rem rgba(0, 0, 0, .15);
 
     @media only screen and(max-width:$bp-large) {
-
         grid-template-rows: 25rem repeat(4, min-content);
     }
 

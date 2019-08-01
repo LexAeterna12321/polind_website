@@ -4,8 +4,7 @@
     grid-template-columns: repeat(5, 1fr);
     grid-column-gap: 3.5rem;
     transform: translateY(-50%);
-    height: 40vh;
-    margin-bottom: -15vh;
+    margin-bottom: -22rem;
 
     @media only screen and(max-width:$bp-large) {
         grid-template-columns: repeat(3, 1fr);
@@ -13,6 +12,10 @@
 
     @media only screen and(max-width:$bp-medium) {
         grid-template-columns: repeat(6, 1fr);
+    }
+
+    @media only screen and(max-width:$bp-small) {
+        margin-bottom: -19rem;
     }
 }
 
