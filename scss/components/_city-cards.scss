@@ -13,17 +13,62 @@
 }
 
 .card {
-    display: grid;
-    grid-template-rows: 18rem repeat(4, min-content);
-    justify-items: center;
-    grid-row-gap: 2rem;
     border-radius: 5px;
     overflow: hidden;
     background-color: #eee;
     box-shadow: .2rem .3rem .7rem rgba(0, 0, 0, .15);
+    transition: transform .4s;
+    position: relative;
 
-    @media only screen and(max-width:$bp-large) {
+    &__front {
+        display: grid;
+        grid-row-gap: 3rem;
         grid-template-rows: 25rem repeat(4, min-content);
+        justify-items: center;
+        transform: rotateY(0deg);
+        transition: all .8s;
+        opacity: 1;
+        backface-visibility: hidden;
+
+        &--hidden {
+            transform: rotateY(-180deg);
+            backface-visibility: hidden;
+            opacity: 0;
+        }
+    }
+
+    &__back {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        transform: translate(-50%, -50%) rotateY(-180deg);
+        font-size: 2rem;
+        backface-visibility: hidden;
+        transition: all .8s;
+        opacity: 0;
+
+        & ul {
+            list-style: none;
+
+            li {
+                margin: 1rem 0;
+
+                &:last-child {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+    }
+
+    &__front--hidden+&__back {
+        transform: translate(-50%, -50%) rotateY(0deg);
+        opacity: 1;
     }
 
     &__img {
@@ -50,6 +95,5 @@
             background-color: var(--color-tertiary-light);
         }
     }
-
 
 }
