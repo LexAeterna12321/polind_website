@@ -10,3 +10,21 @@
         opacity: 1;
     }
 }
+
+@mixin listsStyle {
+    & ul {
+        list-style: none;
+
+        & li {
+            margin: 1rem 0;
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}
